@@ -1,8 +1,8 @@
 # Star-Wars-API
 
-technologies -
+Technologies -
 
-Android Studio
-Kotlin
-Retrofit
+Android Studio,
+Kotlin,
+Retrofit,
 Picasso Library with Lorem Picsum API - http://picsum.photos
