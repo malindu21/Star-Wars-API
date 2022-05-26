@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.starwars.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_planet_details.*
 
+const val DETAILS = "Planet Details"
 class PlanetDetailsFragment : Fragment(R.layout.fragment_planet_details) {
     private var name: String = ""
     private var orbitalPeriod: String = ""
@@ -16,7 +18,7 @@ class PlanetDetailsFragment : Fragment(R.layout.fragment_planet_details) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        (activity as AppCompatActivity).supportActionBar?.title = DETAILS
         this.arguments?.let {
             name = it.getString("name", "")
             orbitalPeriod = it.getString("orbital_period", "")

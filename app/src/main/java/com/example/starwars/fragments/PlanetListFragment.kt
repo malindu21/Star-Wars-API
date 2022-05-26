@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -21,8 +22,7 @@ import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException
 
-const val TAG = "PlanetListFragment"
-
+const val TAG = "Planets"
 class PlanetListFragment : Fragment(R.layout.fragment_planet_list) {
     private lateinit var linearLayoutManager: LinearLayoutManager
     private var planetList = ArrayList<Result>()
@@ -31,6 +31,7 @@ class PlanetListFragment : Fragment(R.layout.fragment_planet_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         linearLayoutManager = LinearLayoutManager(context)
+        (activity as AppCompatActivity).supportActionBar?.title = TAG
         lifecycleScope.launchWhenCreated {
             val planets : Response<Planets>?
             val images : Response<PlanetIcons>?

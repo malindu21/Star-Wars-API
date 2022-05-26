@@ -12,15 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="fill"
-        android:alpha="0.7"
+        android:alpha="0.2"
         android:scaleType="centerCrop" />
 
     <RelativeLayout
         android:id="@+id/clMain"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_layout"
         android:gravity="center"
+
+        app:layout_constraintWidth_percent="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -29,16 +31,16 @@
 
         <ImageView
             android:id="@+id/ivPlanetImage"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="16dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+
             android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginEnd="16dp" />
 
         <TextView
             android:id="@+id/tvName"
